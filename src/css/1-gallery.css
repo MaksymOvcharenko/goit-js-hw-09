@@ -19,3 +19,9 @@
   transform: scale(1.05);
   transition: 1s;
 }
+
+.gallery-link-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 40px;
+}
