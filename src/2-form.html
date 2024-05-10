@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/2-form.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Page 3</title>
   </head>
   <body>
+    <div class="gallery-link-nav">
+      <a href="./index.html" class="nav-link nav-gallery">Main</a>
+      <a href="./1-gallery.html" class="nav-link nav-gallery">Gallery</a>
+    </div>
     <section class="form">
-      <a href="./index.html">Go to home</a>
-      <h1>2-form</h1>
+      <form class="feedback-form" autocomplete="off">
+        <label>
+          Email
+          <input type="email" name="email" autofocus />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="8"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
     </section>
     <script type="module" src="./js/2-form.js"></script>
   </body>

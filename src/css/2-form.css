@@ -1,3 +1,46 @@
-.form {
-  background-color: rebeccapurple;
+.feedback-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  width: 408px;
+  height: 296px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form button {
+  width: 95px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #4e75ff;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.form button:hover {
+  background-color: #6c8cff;
+}
+.form input {
+  height: 40px;
+  width: 360px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+.form textarea {
+  resize: none;
+  height: 80px;
+  width: 360px;
+  border: 1px solid #808080;
+  border-radius: 4px;
 }
