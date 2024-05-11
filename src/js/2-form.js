@@ -1,6 +1,6 @@
 const formData = { email: '', message: '' };
 
-const form = document.querySelector('.feedback-form');
+const form = document.querySelector('form.feedback-form');
 form.addEventListener('input', handleInput);
 form.addEventListener('submit', sendData);
 returnInput();
@@ -8,10 +8,10 @@ returnInput();
 function handleInput(event) {
   const key = event.target.name;
   formData[key] = event.target.value;
-  localStorage.setItem('feedback - form - state', JSON.stringify(formData));
+  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 function returnInput() {
-  const data = JSON.parse(localStorage.getItem('feedback - form - state'));
+  const data = JSON.parse(localStorage.getItem('feedback-form-state'));
   if (!data) {
     return;
   }
@@ -22,11 +22,13 @@ function returnInput() {
 
 function sendData(event) {
   event.preventDefault();
+
   const { email, message } = form.elements;
   if (email.value === '' || message.value === '') {
-    alert('«Fill please all fields»');
+    alert('Fill please all fields');
+    return;
   }
-  localStorage.removeItem('feedback - form - state');
+  localStorage.removeItem('feedback-form-state');
+  console.log(formData);
   form.reset();
-  formData[key] = '';
 }
